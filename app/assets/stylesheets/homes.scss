@@ -29,7 +29,7 @@ html, body {
     margin-left: 12px;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
-    width: 300px;   
+    width: 300px;
 }
 
 #calculate{
@@ -40,7 +40,7 @@ html, body {
     margin-left: 12px;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
-    width: 100px; 
+    width: 100px;
 }
 
 #origin:focus {
@@ -49,7 +49,7 @@ html, body {
 
 @media (max-width: 500px) {
     #origin, #destination{
-        width: 75%; 
+        width: 75%;
     }
 }
 
@@ -60,6 +60,31 @@ html, body {
     font-family: Roboto;
     vertical-align: middle;
     text-align: center;
+}
+
+#route_info{
+    background: white;
+    border-radius: 5px;
+    width: 300px;
+    font-family: Roboto;
+    vertical-align: middle;
+    span{
+        font-size: 14px;
+        margin-left: 10px;
+        margin-top: 6px;
+        display: inline-block;
+
+    }
+
+    img{
+        float: right;
+        margin-right: 10px;
+        margin-top: 3px;
+        cursor: pointer;
+    }
+    img.disabled{
+        opacity: 0.1;
+    }
 }
 
 .bike{
@@ -86,9 +111,20 @@ html, body {
     padding-left: 20px;
     display: inherit;
     float:left;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .emoji_positive, .emoji_neutral, .emoji_poop {
     width: 24px;
     heigth: 21px;
+}
+
+#spinner{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    font-size: 75px;
+    left: 50%;
+    top: 50%;
 }

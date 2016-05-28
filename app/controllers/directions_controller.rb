@@ -10,7 +10,7 @@ class DirectionsController < ApplicationController
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
     end
 
-    response = @conn.get 'directions/json', { origin: origin, destination: destination, mode: "driving", key: $gmaps_key, alternatives: true }
+    response = @conn.get 'directions/json', { origin: origin, destination: destination, mode: "walking", key: $gmaps_key, alternatives: true }
 
 
     routes = JSON.parse(response.body)['routes']
