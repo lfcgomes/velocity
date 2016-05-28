@@ -50,9 +50,6 @@
     function drawTrajectory(routes){
         $('#spinner').hide();
 
-        // $('#wrapper').empty();
-        // $('#wrapper').append('<div id="info" class="controls"> Click in the route markers </div>');
-
         var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer;
         var directionsDisplay1 = new google.maps.DirectionsRenderer;
@@ -97,33 +94,29 @@
                             if(steps[i].start_location.name.length > 25){
                                 street_name = steps[i].start_location.name.substring(0, 22) + '...';
                             }
-                            else
+                            else{
                                 street_name = steps[i].start_location.name;
+                            }
                             div += '<span class="'+steps[i].start_location.status+'">'+street_name + '</span> ';
                             div += '<%= image_tag "emoji_poop", class: "emoji_poop" %> <%= image_tag "emoji_neutral", class: "emoji_neutral"%> <%= image_tag "emoji_positive", class: "emoji_positive" %>'
-                            div += '</div>';    
+                            div += '</div>';
                         }
-                        
+
                     }
+                    //environment
+                    div += "<hr>"
+                    var stats = route1.stats;
+                    for(var i=0;i<stats.length;i++){
+                        div += '<div class="environment"><span>'+stats[i].name+'</span><span class="value">'+stats[i].value+'</span></div>'
+                    }
+
                     div += '</div>';
 
                     $('#info').hide();
-                    $('#wrapper').append(div);
+                    $('#wrapper').parent().append(div);
                     handleClickOnEmoji();
 
                 });
-                // var route = response.routes[0];
-                // var summaryPanel = document.getElementById('directions-panel');
-                // summaryPanel.innerHTML = '';
-                // // For each route, display summary information.
-                // for (var i = 0; i < route.legs.length; i++) {
-                //     var routeSegment = i + 1;
-                //     summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
-                //     '</b><br>';
-                //     summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
-                //     summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-                //     summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
-                // }
             } else {
               window.alert('Directions request failed due to ' + status);
             }
@@ -147,7 +140,7 @@
                 travelMode: google.maps.TravelMode.WALKING
               }, function(response, status) {
                 if (status === google.maps.DirectionsStatus.OK) {
-                    
+
                     directionsDisplay1.setDirections(response);
                     var routeMarker2 = new google.maps.Marker({
                         map: map,
@@ -174,29 +167,26 @@
                                     street_name = steps[i].start_location.name;
                                 div += '<span class="'+steps[i].start_location.status+'">'+street_name + '</span> ';
                                 div += '<%= image_tag "emoji_poop", class: "emoji_poop" %> <%= image_tag "emoji_neutral", class: "emoji_neutral"%> <%= image_tag "emoji_positive", class: "emoji_positive" %>'
-                                div += '</div>';    
+                                div += '</div>';
                             }
-                            
+
                         }
+
+                        //environment
+                        div += "<hr>"
+                        var stats = route2.stats;
+                        for(var i=0;i<stats.length;i++){
+                            div += '<div class="environment"><span>'+stats[i].name+'</span><span class="value">'+stats[i].value+'</span></div>'
+                        }
+
                         div += '</div>';
 
                         $('#info').hide();
-                        $('#wrapper').append(div);
+                        $('#wrapper').parent().append(div);
                         handleClickOnEmoji();
 
                     });
-                    // var route = response.routes[0];
-                    // var summaryPanel = document.getElementById('directions-panel');
-                    // summaryPanel.innerHTML = '';
-                    // For each route, display summary information.
-                    // for (var i = 0; i < route.legs.length; i++) {
-                    //     var routeSegment = i + 1;
-                    //     summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
-                    //     '</b><br>';
-                    //     summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
-                    //     summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-                    //     summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
-                    // }
+
                 } else {
                   window.alert('Directions request failed due to ' + status);
                 }

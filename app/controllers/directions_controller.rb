@@ -18,7 +18,8 @@ class DirectionsController < ApplicationController
     # TODO calculate streets_to_avoid
     streets_with_cars = get_busy_streets
     streets_to_avoid = streets_with_cars
-    #
+    stats = get_stats
+
     routes_and_colisions_map = {}
     routes.each_with_index do |route,i|
       legs = route['legs'][0]
@@ -67,10 +68,11 @@ class DirectionsController < ApplicationController
         formatted_steps << final_step
       end
       route_streets_addresses.uniq!
-      puts route_streets_addresses
+
       routes_and_colisions_map[i] = {
         steps: formatted_steps,
-        busy_streets: route_streets_addresses & streets_to_avoid[:busy]
+        busy_streets: route_streets_addresses & streets_to_avoid[:busy],
+        stats: stats
       }
     end
 
@@ -122,5 +124,57 @@ class DirectionsController < ApplicationController
       end
     end
     street_states
+  end
+
+  def get_stats
+    stats_conn = Faraday.new(:url => 'http://fiware-porto.citibrain.com/v1/') do |faraday|
+      faraday.request  :url_encoded             # form-encode POST params
+      faraday.response :logger                  # log requests to STDOUT
+      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+    end
+
+    response = stats_conn.get 'contextEntityTypes/EnvironmentEvent', { key: $api_key, offset: 0, limit: 100 }
+
+    elements = JSON.parse(response.body)['contextResponses']
+
+    attribute_values = {}
+    average_values = []
+
+    elements.each do |element|
+      element['contextElement']['attributes'].each do |attribute|
+        next if attribute['name'] == "coordinates" or attribute['name'] == "timestamp"
+        if attribute_values[attribute['name']]
+          attribute_values[attribute['name']] << attribute['value']
+        else
+          attribute_values[attribute['name']] = [attribute['value']]
+        end
+      end
+    end
+    attribute_values.each_key do |element|
+      next unless %w(carbon_monoxide humidity noise_level temperature solar_radiation).include?(element)
+      value = (attribute_values[element].map(&:to_f).reduce(:+)/attribute_values[element].size).round(2).to_s
+      case element
+      when "noise_level"
+        name = "Noise"
+        value += " db"
+      when "temperature"
+        name = "Temperature"
+        value += " Cº"
+      when "solar_radiation"
+        name = "Solar Radiation"
+        value += " kW/m2"
+      when "carbon_monoxide"
+        name = "Carbon Monoxide"
+        value += " %"
+      when "humidity"
+        name = "Humidity"
+        value += " %"
+      end
+
+      attribute = { name: name, value: value }
+      average_values << attribute
+    end
+
+    average_values
   end
 end
