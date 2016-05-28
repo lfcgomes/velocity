@@ -5183,3 +5183,1745 @@ Started GET "/" for ::1 at 2016-05-28 13:44:22 +0100
 Processing by HomesController#index as HTML
   Rendered homes/index.html.erb within layouts/application (3.1ms)
 Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-28 13:50:43 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (909.0ms)
+Completed 200 OK in 1139ms (Views: 1121.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/homes.self-16eef153f2d3765c68ec262c441acd3ed4f54edb28ae46f07a104f0a2274a3e9.css?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 13:50:45 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 13:50:58 +0100
+
+
+Started GET "/directions?origin=41.1484572%2C-8.610746400000039&destination=41.168936%2C-8.590617399999928" for ::1 at 2016-05-28 13:50:58 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1484572,-8.610746400000039", "destination"=>"41.168936,-8.590617399999928"}
+Completed 200 OK in 25523ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bike_icon-6b5028cf23a3ebaf556a9ef18b9195d298255820083a09191003cef99e83c8c0.png" for ::1 at 2016-05-28 13:51:24 +0100
+
+
+Started GET "/assets/close_icon-729e62ba5f0d4af2503bc9163c889c7eaeb7dc42ff8f6fccea6f1595bba81bda.png" for ::1 at 2016-05-28 13:51:24 +0100
+
+
+Started GET "/assets/info_tag-1-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 13:51:24 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 13:52:12 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 13:52:12 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 13:52:12 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:02:56 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (662.6ms)
+Completed 200 OK in 849ms (Views: 848.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:02:57 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:02:57 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:02:57 +0100
+
+
+Started GET "/assets/homes.self-c94ca5f65af40faf26db632bdec92bcd370f29cffd922be70767240e467a5f39.css?body=1" for ::1 at 2016-05-28 14:02:57 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:02:57 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:02:57 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:02:57 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:02:57 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:02:58 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:02:58 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:02:58 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:02:58 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:02:58 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:02:58 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:02:58 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:03:13 +0100
+
+
+Started GET "/directions?origin=41.1484572%2C-8.610746400000039&destination=41.168936%2C-8.590617399999928" for ::1 at 2016-05-28 14:03:14 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1484572,-8.610746400000039", "destination"=>"41.168936,-8.590617399999928"}
+Completed 500 Internal Server Error in 20898ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/directions_controller.rb:88:in `get_address'
+  app/controllers/directions_controller.rb:34:in `block (2 levels) in index'
+  app/controllers/directions_controller.rb:31:in `each'
+  app/controllers/directions_controller.rb:31:in `block in index'
+  app/controllers/directions_controller.rb:23:in `each'
+  app/controllers/directions_controller.rb:23:in `each_with_index'
+  app/controllers/directions_controller.rb:23:in `index'
+
+
+  Rendered /Users/lfcgomes/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/lfcgomes/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/lfcgomes/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (5.6ms)
+  Rendered /Users/lfcgomes/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (65.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-28 14:06:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (335.8ms)
+Completed 200 OK in 471ms (Views: 454.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/homes.self-c94ca5f65af40faf26db632bdec92bcd370f29cffd922be70767240e467a5f39.css?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:06:10 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:06:23 +0100
+
+
+Started GET "/directions?origin=41.1484572%2C-8.610746400000039&destination=41.168936%2C-8.590617399999928" for ::1 at 2016-05-28 14:06:24 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1484572,-8.610746400000039", "destination"=>"41.168936,-8.590617399999928"}
+Completed 200 OK in 25363ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/close_icon-729e62ba5f0d4af2503bc9163c889c7eaeb7dc42ff8f6fccea6f1595bba81bda.png" for ::1 at 2016-05-28 14:06:50 +0100
+
+
+Started GET "/assets/bike_icon-6b5028cf23a3ebaf556a9ef18b9195d298255820083a09191003cef99e83c8c0.png" for ::1 at 2016-05-28 14:06:50 +0100
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:06:50 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:08:05 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 138ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/homes.self-c94ca5f65af40faf26db632bdec92bcd370f29cffd922be70767240e467a5f39.css?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:08:05 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:08:17 +0100
+
+
+Started GET "/directions?origin=41.1484572%2C-8.610746400000039&destination=41.168936%2C-8.590617399999928" for ::1 at 2016-05-28 14:08:18 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1484572,-8.610746400000039", "destination"=>"41.168936,-8.590617399999928"}
+Completed 200 OK in 24482ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bike_icon-6b5028cf23a3ebaf556a9ef18b9195d298255820083a09191003cef99e83c8c0.png" for ::1 at 2016-05-28 14:08:42 +0100
+
+
+Started GET "/assets/close_icon-729e62ba5f0d4af2503bc9163c889c7eaeb7dc42ff8f6fccea6f1595bba81bda.png" for ::1 at 2016-05-28 14:08:42 +0100
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:08:43 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:11:20 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/homes.self-c94ca5f65af40faf26db632bdec92bcd370f29cffd922be70767240e467a5f39.css?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:11:21 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:11:39 +0100
+
+
+Started GET "/directions?origin=41.1484572%2C-8.610746400000039&destination=41.168936%2C-8.590617399999928" for ::1 at 2016-05-28 14:11:39 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1484572,-8.610746400000039", "destination"=>"41.168936,-8.590617399999928"}
+Completed 200 OK in 24749ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bike_icon-6b5028cf23a3ebaf556a9ef18b9195d298255820083a09191003cef99e83c8c0.png" for ::1 at 2016-05-28 14:12:04 +0100
+
+
+Started GET "/assets/close_icon-729e62ba5f0d4af2503bc9163c889c7eaeb7dc42ff8f6fccea6f1595bba81bda.png" for ::1 at 2016-05-28 14:12:04 +0100
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:12:04 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:12:53 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 145ms (Views: 143.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:12:53 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:12:53 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:12:53 +0100
+
+
+Started GET "/assets/homes.self-c97518584ed4b8be30917e8d97527730d8e9c182ed1321e56ff8cb38b19f695c.css?body=1" for ::1 at 2016-05-28 14:12:53 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:12:53 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:12:53 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:12:53 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:12:53 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:12:54 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:12:54 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:12:54 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:12:54 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:12:54 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:12:54 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:12:54 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:12:58 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 201ms (Views: 197.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/homes.self-11365474da5a51d35d63aec42fbb38f1f67019e8a54b5714bd3d22e2150bb771.css?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:12:58 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:13:11 +0100
+
+
+Started GET "/directions?origin=41.1484572%2C-8.610746400000039&destination=41.168936%2C-8.590617399999928" for ::1 at 2016-05-28 14:13:11 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1484572,-8.610746400000039", "destination"=>"41.168936,-8.590617399999928"}
+Completed 200 OK in 23754ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bike_icon-6b5028cf23a3ebaf556a9ef18b9195d298255820083a09191003cef99e83c8c0.png" for ::1 at 2016-05-28 14:13:35 +0100
+
+
+Started GET "/assets/close_icon-729e62ba5f0d4af2503bc9163c889c7eaeb7dc42ff8f6fccea6f1595bba81bda.png" for ::1 at 2016-05-28 14:13:35 +0100
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:13:35 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:21:06 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (80.2ms)
+Completed 200 OK in 684ms (Views: 678.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:21:07 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:21:07 +0100
+
+
+Started GET "/assets/homes.self-7550c28ea5608f5f9d78c3189ec95ca8b92234f0fec6f91cc33edef9020c8238.css?body=1" for ::1 at 2016-05-28 14:21:07 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:21:07 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:21:07 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:21:07 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:21:07 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:21:07 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:21:07 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:21:08 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:21:08 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:21:08 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:21:08 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:21:08 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:21:08 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:21:35 +0100
+
+
+Started GET "/directions?origin=41.1484572%2C-8.610746400000039&destination=41.168936%2C-8.590617399999928" for ::1 at 2016-05-28 14:21:35 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1484572,-8.610746400000039", "destination"=>"41.168936,-8.590617399999928"}
+Completed 200 OK in 18028ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-28 14:22:22 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 63ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/homes.self-7550c28ea5608f5f9d78c3189ec95ca8b92234f0fec6f91cc33edef9020c8238.css?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:22:22 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:22:35 +0100
+
+
+Started GET "/directions?origin=41.1484572%2C-8.610746400000039&destination=41.168936%2C-8.590617399999928" for ::1 at 2016-05-28 14:22:36 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1484572,-8.610746400000039", "destination"=>"41.168936,-8.590617399999928"}
+Completed 200 OK in 20294ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:22:56 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:23:02 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:23:02 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:23:02 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:27:01 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/homes.self-7550c28ea5608f5f9d78c3189ec95ca8b92234f0fec6f91cc33edef9020c8238.css?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:27:02 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:27:37 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.148796%2C-8.598348999999985" for ::1 at 2016-05-28 14:27:37 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.148796,-8.598348999999985"}
+Completed 200 OK in 17031ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:27:55 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:28:07 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:28:07 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:28:07 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:29:48 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/homes.self-7550c28ea5608f5f9d78c3189ec95ca8b92234f0fec6f91cc33edef9020c8238.css?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:29:48 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:29:49 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:29:49 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:29:49 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:30:01 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:30:02 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 21059ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:31:50 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 14339ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-28 14:32:04 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/homes.self-7550c28ea5608f5f9d78c3189ec95ca8b92234f0fec6f91cc33edef9020c8238.css?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:32:05 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:32:14 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:32:15 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 13174ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:32:28 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:32:35 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:32:35 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:32:35 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:35:16 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 59ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/homes.self-7550c28ea5608f5f9d78c3189ec95ca8b92234f0fec6f91cc33edef9020c8238.css?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:35:17 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:35:34 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:35:34 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 18844ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:35:55 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:36:06 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:36:06 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:36:06 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:36:28 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 33ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/homes.self-7550c28ea5608f5f9d78c3189ec95ca8b92234f0fec6f91cc33edef9020c8238.css?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:36:29 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:36:41 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:36:41 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 19775ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:37:01 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:37:16 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:37:16 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:37:16 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:40:41 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:40:41 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:40:41 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:40:41 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:40:41 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:40:41 +0100
+
+
+Started GET "/assets/homes.self-7550c28ea5608f5f9d78c3189ec95ca8b92234f0fec6f91cc33edef9020c8238.css?body=1" for ::1 at 2016-05-28 14:40:41 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:40:42 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:40:42 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:40:42 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:40:42 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:40:42 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:40:42 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:40:42 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:40:42 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:40:42 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:40:57 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:40:57 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 15333ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:41:13 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:41:17 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:41:17 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:41:17 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:41:35 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/homes.self-7550c28ea5608f5f9d78c3189ec95ca8b92234f0fec6f91cc33edef9020c8238.css?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:41:35 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:41:48 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 110ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/homes.self-7550c28ea5608f5f9d78c3189ec95ca8b92234f0fec6f91cc33edef9020c8238.css?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:41:49 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:42:07 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:42:08 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 14543ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:42:22 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:42:26 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:42:27 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:42:27 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:43:25 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 135ms (Views: 134.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/homes.self-a6444fceddd9fc7b6ebcbebc62825028508c7d01f2521b9126c157b7af3aec7b.css?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:43:26 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:44:01 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:44:01 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 13502ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:44:15 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:44:27 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:44:27 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:44:27 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.168936%2C-8.590617399999928" for ::1 at 2016-05-28 14:44:54 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.168936,-8.590617399999928"}
+Completed 200 OK in 19408ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-28 14:45:27 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 72ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:45:27 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/homes.self-a6444fceddd9fc7b6ebcbebc62825028508c7d01f2521b9126c157b7af3aec7b.css?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:45:28 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:48:59 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 61ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/homes.self-a6444fceddd9fc7b6ebcbebc62825028508c7d01f2521b9126c157b7af3aec7b.css?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:49:00 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:49:55 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 88ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/homes.self-a6444fceddd9fc7b6ebcbebc62825028508c7d01f2521b9126c157b7af3aec7b.css?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:49:56 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:50:05 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:50:05 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 21544ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:50:27 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:50:33 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:50:33 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:50:33 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:50:42 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 87ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:50:42 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:50:42 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:50:42 +0100
+
+
+Started GET "/assets/homes.self-a6444fceddd9fc7b6ebcbebc62825028508c7d01f2521b9126c157b7af3aec7b.css?body=1" for ::1 at 2016-05-28 14:50:42 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:50:42 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:50:42 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:50:43 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:50:43 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:50:43 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:50:43 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:50:43 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:50:43 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:50:43 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:50:43 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:50:43 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:50:55 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/homes.self-a6444fceddd9fc7b6ebcbebc62825028508c7d01f2521b9126c157b7af3aec7b.css?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:50:56 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:51:30 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/homes.self-a6444fceddd9fc7b6ebcbebc62825028508c7d01f2521b9126c157b7af3aec7b.css?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:51:30 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:51:31 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:51:31 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:51:40 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:51:41 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 15161ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:51:56 +0100
+
+
+Started GET "/assets/info_tag_blue-de516ae6248f3e4449bf5ca912516167000cbcfe5329e02c6c996607f89200c3.png" for ::1 at 2016-05-28 14:51:56 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:51:58 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:51:58 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:51:58 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:52:33 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 76ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:52:33 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:52:33 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:52:33 +0100
+
+
+Started GET "/assets/homes.self-a6444fceddd9fc7b6ebcbebc62825028508c7d01f2521b9126c157b7af3aec7b.css?body=1" for ::1 at 2016-05-28 14:52:33 +0100
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:52:33 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:52:33 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:52:33 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:52:33 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:52:33 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:52:33 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:52:33 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:52:34 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:52:34 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:52:34 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:52:34 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:52:48 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:52:49 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 14120ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:53:03 +0100
+
+
+Started GET "/assets/info_tag_blue-de516ae6248f3e4449bf5ca912516167000cbcfe5329e02c6c996607f89200c3.png" for ::1 at 2016-05-28 14:53:03 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:53:06 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:53:06 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:53:06 +0100
+
+
+Started GET "/" for ::1 at 2016-05-28 14:53:38 +0100
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 46ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/directions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/font-awesome.self-439e1d45a56e0ef00b68c07a2eb82179d3705c2b532243bd8a3e756043d430c9.css?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/environment.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/scaffolds.self-cfc7797c5eb68e765e1f9c8a6519c19d16895549d7cd6f27925e509be826a518.css?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/traffic.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/homes.self-a6444fceddd9fc7b6ebcbebc62825028508c7d01f2521b9126c157b7af3aec7b.css?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/directions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/environment.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/homes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/traffic.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-28 14:53:38 +0100
+
+
+Started GET "/assets/fontawesome-webfont-2932abf996373e87fbf2e950876b1962f1b57db954a1643ea68831d9fbb74da4.woff2?v=4.6.2" for ::1 at 2016-05-28 14:53:52 +0100
+
+
+Started GET "/directions?origin=41.1413772%2C-8.61567249999996&destination=41.1468847%2C-8.618980400000055" for ::1 at 2016-05-28 14:53:52 +0100
+Processing by DirectionsController#index as */*
+  Parameters: {"origin"=>"41.1413772,-8.61567249999996", "destination"=>"41.1468847,-8.618980400000055"}
+Completed 200 OK in 18464ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/info_tag_blue-de516ae6248f3e4449bf5ca912516167000cbcfe5329e02c6c996607f89200c3.png" for ::1 at 2016-05-28 14:54:11 +0100
+
+
+Started GET "/assets/info_tag_green-3f22a91ffb0b8c5a88bfe9d0dff869b88d49c7d23d4fdd6c98053218137c9358.png" for ::1 at 2016-05-28 14:54:11 +0100
+
+
+Started GET "/assets/emoji_poop-16ca0e8bf65acc29ef26795496078862f52225136bfc109988b88f6d5d46f317.png" for ::1 at 2016-05-28 14:54:14 +0100
+
+
+Started GET "/assets/emoji_neutral-cd73cd0ff715adf5aa2d314fb8e6a81b225b28368093f988fcbd8349d1672d32.png" for ::1 at 2016-05-28 14:54:14 +0100
+
+
+Started GET "/assets/emoji_positive-3ea33dfa6215d472a3a2e317ddacda82a002fc0ef5adfc76251f590004dd96f4.png" for ::1 at 2016-05-28 14:54:14 +0100

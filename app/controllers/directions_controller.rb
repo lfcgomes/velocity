@@ -81,7 +81,7 @@ class DirectionsController < ApplicationController
 
   def get_address(coordinates)
     #https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyBUFZFchMpUpOq-j9X4piApksiJ5zg5zS0
-    response = @conn.get 'geocode/json', { latlng: coordinates, key: 'AIzaSyBUFZFchMpUpOq-j9X4piApksiJ5zg5zS0' }
+    response = @conn.get 'geocode/json', { latlng: coordinates, key: 'AIzaSyBgqAZ4fLrPrQtDkNbGW91yK6bqCawq3qA' }
     streets = JSON.parse(response.body)
 
     most_relevant_street = ""

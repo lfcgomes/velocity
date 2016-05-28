@@ -49,14 +49,10 @@
 
     function drawTrajectory(routes){
         $('#spinner').hide();
-        console.log(routes);
-        var a = $('#wrapper');
-        console.log(a);
-        // $('#wrapper').innerHTML = "";
-        $('#wrapper').empty();
-        $('#wrapper').append('<div id="info" class="controls"> <%= image_tag "bike_icon", class: "bike", id: "js-bike" %> <span id="js-info" class="info-text"> More Information </span> <%= image_tag "close_icon", class: "close", id:"js-close"%> </div>');
 
-        handleClickOnInfo();
+        // $('#wrapper').empty();
+        // $('#wrapper').append('<div id="info" class="controls"> Click in the route markers </div>');
+
         var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer;
         var directionsDisplay1 = new google.maps.DirectionsRenderer;
@@ -80,14 +76,41 @@
             if (status === google.maps.DirectionsStatus.OK) {
 
                 directionsDisplay.setDirections(response);
-                var routeMarker = new google.maps.Marker({
+                var routeMarker1 = new google.maps.Marker({
                     map: map,
-                    position: wpts[wpts.length/2].location,
-                    icon: '<%= image_url "info_tag-1"%>'
+                    position: wpts[parseInt(wpts.length/2)].location,
+                    icon: '<%= image_url "info_tag_green"%>'
                 });
 
-                routeMarker.addListener('click', function() {
-                    console.log('carregaste nisto!');
+                routeMarker1.addListener('click', function() {
+                    $('#route_info').remove();
+                    console.log(route1.steps);
+                    var div = '<div id="route_info" class="controls">';
+                    var steps = route1.steps;
+                    var streets = [];
+                    for (var i = 0; i < steps.length; i++) {
+                        div += '<div style="margin-bottom: 5px;">'
+                        if (streets.indexOf(steps[i].start_location.name) <0){
+
+                            streets.push(steps[i].start_location.name);
+                            var street_name;
+                            if(steps[i].start_location.name.length > 25){
+                                street_name = steps[i].start_location.name.substring(0, 22) + '...';
+                            }
+                            else
+                                street_name = steps[i].start_location.name;
+                            div += '<span class="'+steps[i].start_location.status+'">'+street_name + '</span> ';
+                            div += '<%= image_tag "emoji_poop", class: "emoji_poop" %> <%= image_tag "emoji_neutral", class: "emoji_neutral"%> <%= image_tag "emoji_positive", class: "emoji_positive" %>'
+                            div += '</div>';    
+                        }
+                        
+                    }
+                    div += '</div>';
+
+                    $('#info').hide();
+                    $('#wrapper').append(div);
+                    handleClickOnEmoji();
+
                 });
                 // var route = response.routes[0];
                 // var summaryPanel = document.getElementById('directions-panel');
@@ -106,13 +129,15 @@
             }
         });
 
+
         if(routes[1]){
+            var route2 = routes[1];
             console.log('há alternativa!');
-            console.log(routes[1].steps.length);
+            console.log(route2.steps.length);
             var wpts1 = [];
-            for(i=1; i < routes[1].steps.length-1; i++){
+            for(i=1; i < route2.steps.length-1; i++){
                 if(wpts1.length < 8)
-                    wpts1.push({location: routes[1].steps[i].start_location, stopover: false});
+                    wpts1.push({location: route2.steps[i].start_location, stopover: false});
             }
 
             directionsService.route({
@@ -124,6 +149,42 @@
                 if (status === google.maps.DirectionsStatus.OK) {
                     
                     directionsDisplay1.setDirections(response);
+                    var routeMarker2 = new google.maps.Marker({
+                        map: map,
+                        position: wpts1[parseInt(wpts1.length/2)].location,
+                        icon: '<%= image_url "info_tag_blue"%>'
+                    });
+
+                    routeMarker2.addListener('click', function() {
+                        $('#route_info').remove();
+                        console.log(route2.steps);
+                        var div = '<div id="route_info" class="controls">';
+                        var steps = route2.steps;
+                        var streets = [];
+                        for (var i = 0; i < steps.length; i++) {
+                            div += '<div style="margin-bottom: 5px;">'
+                            if (streets.indexOf(steps[i].start_location.name) <0){
+
+                                streets.push(steps[i].start_location.name);
+                                var street_name;
+                                if(steps[i].start_location.name.length > 25){
+                                    street_name = steps[i].start_location.name.substring(0, 22) + '...';
+                                }
+                                else
+                                    street_name = steps[i].start_location.name;
+                                div += '<span class="'+steps[i].start_location.status+'">'+street_name + '</span> ';
+                                div += '<%= image_tag "emoji_poop", class: "emoji_poop" %> <%= image_tag "emoji_neutral", class: "emoji_neutral"%> <%= image_tag "emoji_positive", class: "emoji_positive" %>'
+                                div += '</div>';    
+                            }
+                            
+                        }
+                        div += '</div>';
+
+                        $('#info').hide();
+                        $('#wrapper').append(div);
+                        handleClickOnEmoji();
+
+                    });
                     // var route = response.routes[0];
                     // var summaryPanel = document.getElementById('directions-panel');
                     // summaryPanel.innerHTML = '';
@@ -244,18 +305,9 @@
         });
     }
 
-    function handleClickOnInfo(){
-        $("#js-info").click(function(){
-            var div = '<div id="route_info" class="controls"><span>Nome da rua linda</span> <%= image_tag "emoji_poop", class: "emoji_poop" %> <%= image_tag "emoji_neutral", class: "emoji_neutral"%> <%= image_tag "emoji_positive", class: "emoji_positive" %></div>'
-            $('#info').hide();
-            $('#wrapper').append(div);
-            handleClickOnEmoji();
-        });
-    }
-
     function handleClickOnEmoji(){
         $('#route_info img').on('click',function(){
-            $('#route_info img').addClass('disabled');
+            $(this).siblings('img').addClass('disabled');
             $(this).removeClass('disabled');
         })
     }

@@ -66,8 +66,10 @@ html, body {
     background: white;
     border-radius: 5px;
     width: 300px;
+    height: 100%;
     font-family: Roboto;
     vertical-align: middle;
+    margin-left: 12px;
     span{
         font-size: 14px;
         margin-left: 10px;
@@ -127,4 +129,17 @@ html, body {
     font-size: 75px;
     left: 50%;
     top: 50%;
+}
+
+.free {
+    color: green;
+}
+
+.normal {
+    color: yellow;
+}
+
+.busy {
+    color: red;
+    font-weight: bold;
 }
