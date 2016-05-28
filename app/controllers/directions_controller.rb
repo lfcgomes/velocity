@@ -122,9 +122,5 @@ class DirectionsController < ApplicationController
       end
     end
     street_states
-
-
-
-
   end
 end

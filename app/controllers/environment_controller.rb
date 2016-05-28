@@ -7,34 +7,27 @@ class EnvironmentController < ApplicationController
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
     end
 
-    response = @conn.post do |req|
-      req.url "queryContext?key=#{$api_key}"
-      req.headers['Content-Type'] = 'application/json'
-      req.body = '{
-                    "entities": [
-                        {
-                            "type": "EnvironmentEvent",
-                            "isPattern": "true",
-                            "id": ".*"
-                        }
-                    ],
-                    "restriction": {
-                        "scopes": [
-                            {
-                                "type" : "FIWARE::Location",
-                                "value" : {
-                                    "circle": {
-                                        "centerLatitude": "41.178031",
-                                        "centerLongitude": "-8.594866",
-                                        "radius": "1"
-                                    }
-                                }
-                            }
-                        ]
-                    }
-                }'
+    response = @conn.get 'contextEntityTypes/EnvironmentEvent', { key: $api_key, offset: 0, limit: 100 }
+
+    elements = JSON.parse(response.body)['contextResponses']
+
+    attribute_values = {}
+    average_values = {}
+
+    elements.each do |element|
+      element['contextElement']['attributes'].each do |attribute|
+        next if attribute['name'] == "coordinates" or attribute['name'] == "timestamp"
+        if attribute_values[attribute['name']]
+          attribute_values[attribute['name']] << attribute['value']
+        else
+          attribute_values[attribute['name']] = [attribute['value']]
+        end
+      end
+    end
+    attribute_values.each_key do |element|
+      average_values[element] = (attribute_values[element].map(&:to_f).reduce(:+)/attribute_values[element].size).round(2)
     end
 
-    render json: response.body
+    render json: average_values
   end
 end
