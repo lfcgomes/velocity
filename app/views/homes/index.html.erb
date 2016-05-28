@@ -1,6 +1,4 @@
-<div id="route_info">
-    <span>Nome da rua linda</span> <%= image_tag "emoji_positive", class: "emoji_positive" %> <%= image_tag "emoji_neutral", class: "emoji_neutral"%> <%= image_tag "emoji_poop", class: "emoji_poop" %>
-</div>
+<div id="directions-panel"></div>
 
 <div id="wrapper">
     <input id="origin" class="controls" type="text"
@@ -22,27 +20,27 @@
         var destination = $('#destination').val();
         if(origin.length === 0) console.log('no origin');
         if(destination.length === 0) console.log('no destination');
-        drawTrajectory();
-        // var data = {};
-        // geocoder.geocode( { 'address': origin}, function(results, status) {
-        //     if (status == google.maps.GeocoderStatus.OK) {
-        //         data.origin = results[0].geometry.location.lat()+','+results[0].geometry.location.lng();
-        //         geocoder.geocode( { 'address': destination}, function(results, status) {
-        //             data.destination = results[0].geometry.location.lat()+','+results[0].geometry.location.lng();
-        //             console.log(data);
+        // drawTrajectory();
+        var data = {};
+        geocoder.geocode( { 'address': origin}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                data.origin = results[0].geometry.location.lat()+','+results[0].geometry.location.lng();
+                geocoder.geocode( { 'address': destination}, function(results, status) {
+                    data.destination = results[0].geometry.location.lat()+','+results[0].geometry.location.lng();
+                    console.log(data);
                     
-        //             // $.ajax({
-        //             //     type: "GET",
-        //             //     url: '/directions',
-        //             //     data: data,
-        //             //     success: drawTrajectory,
-        //             // });
-        //         });
+                    $.ajax({
+                        type: "GET",
+                        url: '/directions',
+                        data: data,
+                        success: drawTrajectory,
+                    });
+                });
 
-        //     } else {
-        //         alert("Geocode was not successful for the following reason: " + status);
-        //     }
-        // });
+            } else {
+                alert("Geocode was not successful for the following reason: " + status);
+            }
+        });
     });
 
     
@@ -53,44 +51,90 @@
         // $('#wrapper').innerHTML = "";
         $('#wrapper').empty();
         $('#wrapper').append('<div id="info" class="controls"> <%= image_tag "bike_icon", class: "bike", id: "js-bike" %> <span id="js-info" class="info-text"> More Information </span> <%= image_tag "close_icon", class: "close", id:"js-close"%> </div>');
-        handleClickOnInfo();
-        // var directionsService = new google.maps.DirectionsService;
-        // var directionsDisplay = new google.maps.DirectionsRenderer;
-        // directionsDisplay.setMap(map);
+        // handleClickOnInfo();
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var directionsDisplay1 = new google.maps.DirectionsRenderer;
+        directionsDisplay.setMap(map);
+        directionsDisplay1.setMap(map);
 
-        // var route1 = routes[0];
-        // var wpts = [];
-        // for(i=1; i < route1.steps.length-1; i++){
-        //     if(wpts.length < 8)
-        //         wpts.push({location: route1.steps[i].start_location, stopover: false});
-        // }
+        var route1 = routes[0];
+        var wpts = [];
+        for(i=1; i < route1.steps.length-1; i++){
+            if(wpts.length < 8)
+                wpts.push({location: route1.steps[i].start_location, stopover: false});
+        }
 
-        // directionsService.route({
-        //     origin: origin_marker.getPosition(),
-        //     destination: destination_marker.getPosition(),
-        //     waypoints: wpts,
-        //     travelMode: google.maps.TravelMode.WALKING
-        //   }, function(response, status) {
-        //     if (status === google.maps.DirectionsStatus.OK) {
+        directionsService.route({
+            origin: origin_marker.getPosition(),
+            destination: destination_marker.getPosition(),
+            waypoints: wpts,
+            travelMode: google.maps.TravelMode.WALKING
+          }, function(response, status) {
+            if (status === google.maps.DirectionsStatus.OK) {
                 
-        //         directionsDisplay.setDirections(response);
-        //         // var route = response.routes[0];
-        //         // var summaryPanel = document.getElementById('directions-panel');
-        //         // summaryPanel.innerHTML = '';
-        //         // // For each route, display summary information.
-        //         // for (var i = 0; i < route.legs.length; i++) {
-        //         //     var routeSegment = i + 1;
-        //         //     summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
-        //         //     '</b><br>';
-        //         //     summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
-        //         //     summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-        //         //     summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
-        //         // }
-        //     } else {
-        //       window.alert('Directions request failed due to ' + status);
-        //     }
-        // });
+                directionsDisplay.setDirections(response);
+                var routeMarker = new google.maps.Marker({
+                    map: map,
+                    position: wpts[wpts.length/2].location,
+                    icon: '<%= image_url "info_tag-1"%>'
+                });
 
+                routeMarker.addListener('click', function() {
+                    console.log('carregaste nisto!');
+                });
+                // var route = response.routes[0];
+                // var summaryPanel = document.getElementById('directions-panel');
+                // summaryPanel.innerHTML = '';
+                // // For each route, display summary information.
+                // for (var i = 0; i < route.legs.length; i++) {
+                //     var routeSegment = i + 1;
+                //     summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
+                //     '</b><br>';
+                //     summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
+                //     summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
+                //     summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+                // }
+            } else {
+              window.alert('Directions request failed due to ' + status);
+            }
+        });
+
+        if(routes[1]){
+            console.log('há alternativa!');
+            console.log(routes[1].steps.length);
+            var wpts1 = [];
+            for(i=1; i < routes[1].steps.length-1; i++){
+                if(wpts1.length < 8)
+                    wpts1.push({location: routes[1].steps[i].start_location, stopover: false});
+            }
+
+            directionsService.route({
+                origin: origin_marker.getPosition(),
+                destination: destination_marker.getPosition(),
+                waypoints: wpts1,
+                travelMode: google.maps.TravelMode.WALKING
+              }, function(response, status) {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    
+                    directionsDisplay1.setDirections(response);
+                    // var route = response.routes[0];
+                    // var summaryPanel = document.getElementById('directions-panel');
+                    // summaryPanel.innerHTML = '';
+                    // For each route, display summary information.
+                    // for (var i = 0; i < route.legs.length; i++) {
+                    //     var routeSegment = i + 1;
+                    //     summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
+                    //     '</b><br>';
+                    //     summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
+                    //     summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
+                    //     summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+                    // }
+                } else {
+                  window.alert('Directions request failed due to ' + status);
+                }
+            });
+        }
     }
 
     function initMap() {
