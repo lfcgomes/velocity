@@ -1,14 +1,14 @@
 class DirectionsController < ApplicationController
 
   def index
+    origin = params[:origin]
+    destination = params[:destination]
+
     @conn = Faraday.new(:url => 'https://maps.googleapis.com/maps/api/') do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
     end
-
-    origin = params[:origin]
-    destination = params[:destination]
 
     response = @conn.get 'directions/json', { origin: origin, destination: destination, mode: "driving", key: $gmaps_key, alternatives: true }
 

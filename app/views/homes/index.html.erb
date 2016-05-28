@@ -2,7 +2,7 @@
 <div id="wrapper">
     <input id="origin" class="controls" type="text"
         placeholder="Enter the origin">
-    <input id="destination" class="controls" type="text" 
+    <input id="destination" class="controls" type="text"
     placeholder="Enter the destination">
     <button name="calculate" id="calculate" class="controls">Calculate!</button>
 </div>
@@ -28,21 +28,21 @@
                     data.destination = results[0].geometry.location.lat()+','+results[0].geometry.location.lng();
                     console.log(data);
                     $.ajax({
-                        type: "POST",
+                        type: "GET",
                         url: '/directions',
                         data: data,
                         success: drawTrajectory,
                     });
                 });
-                
+
             } else {
                 alert("Geocode was not successful for the following reason: " + status);
             }
         });
     });
-    
-    function drawTrajectory(){
-        console.log('');
+
+    function drawTrajectory(cenas){
+        console.log(cenas);
     }
 
     function initMap() {
@@ -51,7 +51,7 @@
         geocoder = new google.maps.Geocoder();
 
         var wrapper = (document.getElementById('wrapper'));
-        
+
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 41.159882, lng: -8.628955},
             zoom: 14
@@ -60,7 +60,7 @@
         google.maps.event.addDomListener(window, 'resize', function(){
             console.log('fez resize!!!');
             // map.setCenter(map_center);
-            if(bounds) 
+            if(bounds)
                 map.fitBounds(bounds);
         });
 
@@ -74,7 +74,7 @@
             (document.getElementById('destination')),{types: ['geocode']});
         // When the user selects an address from the dropdown, populate the address
         // fields in the form.
-        
+
         autocomplete_origin.addListener('place_changed', function(){
             if(origin_marker)
                 origin_marker.setMap(null);
@@ -98,7 +98,7 @@
                 bounds.extend(destination_marker.position);
                 map.fitBounds(bounds);
             }
-            
+
             var address = '';
             if (place.address_components) {
                 address = [
@@ -121,7 +121,7 @@
                 map.fitBounds(place.geometry.viewport);
             } else {
                 map.setCenter(place.geometry.location);
-                map.setZoom(15); 
+                map.setZoom(15);
             }
 
             destination_marker = new google.maps.Marker({
@@ -134,7 +134,7 @@
                 bounds.extend(origin_marker.position);
                 map.fitBounds(bounds);
             }
-            
+
             var address = '';
             if (place.address_components) {
                 address = [
