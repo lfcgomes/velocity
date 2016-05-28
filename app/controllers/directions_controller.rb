@@ -1,17 +1,66 @@
 class DirectionsController < ApplicationController
 
   def index
-    conn = Faraday.new(:url => 'https://maps.googleapis.com/maps/api/') do |faraday|
+    @conn = Faraday.new(:url => 'https://maps.googleapis.com/maps/api/') do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
       faraday.response :logger                  # log requests to STDOUT
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
     end
 
-    ## GET ##
+    origin = params[:origin]
+    destination = params[:destination]
 
-    response = conn.get 'directions/json', { origin: "41.168936,-8.590617", destination: "41.142192,-8.614955", mode: "driving", key: "AIzaSyDrYo3wJqcRthZNCdYR4bBYdaI6u4DL_Kc" }
-    #raise response.body.inspect
+    response = @conn.get 'directions/json', { origin: origin, destination: destination, mode: "driving", key: $gmaps_key, alternatives: true }
 
-    render json: response.body
+
+    routes = JSON.parse(response.body)['routes']
+
+    # TODO calculate streets_to_avoid
+    streets_to_avoid = ["Rua Professor de Abel Salazar"]
+    #
+    routes_and_colisions_map = {}
+    routes.each_with_index do |route,i|
+      legs = route['legs'][0]
+      distance_in_text = legs['distance']['text']
+      duration_in_text = legs['duration']['text']
+      steps = legs['steps']
+      route_streets_coordinates = []
+      route_streets_addresses   = []
+      steps.each do |step|
+        step_starting_point = "#{step['start_location']['lat']},#{step['start_location']['lng']}"
+        step_ending_point   = "#{step['end_location']['lat']},#{step['end_location']['lng']}"
+        unless route_streets_coordinates.include?(step_starting_point)
+          route_streets_coordinates << step_starting_point
+          route_streets_addresses   << get_address(step_starting_point)
+        end
+
+        unless route_streets_coordinates.include?(step_ending_point)
+          route_streets_coordinates << step_ending_point
+          route_streets_addresses   << get_address(step_ending_point)
+        end
+      end
+      route_streets_addresses.uniq!
+      puts route_streets_addresses
+      routes_and_colisions_map[i] = route_streets_addresses & streets_to_avoid
+    end
+
+    render json: routes_and_colisions_map
+  end
+
+  private
+
+  def get_address(coordinates)
+    #https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=YOUR_API_KEY
+    response = @conn.get 'geocode/json', { latlng: coordinates, key: $gmaps_key }
+    streets = JSON.parse(response.body)
+
+    most_relevant_street = ""
+    streets['results'][0]['address_components'].each do |component|
+      if component['types'].include?("route")
+        most_relevant_street = component['long_name']
+        break
+      end
+    end
+    most_relevant_street
   end
 end
