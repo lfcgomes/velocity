@@ -52,3 +52,43 @@ html, body {
         width: 75%; 
     }
 }
+
+#info {
+    background: white;
+    border-radius: 5px;
+    width: 300px;
+    font-family: Roboto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.bike{
+    width: 24px;
+    heigth: 21px;
+    float: left;
+    padding-top: 4px;
+    padding-left: 15px;
+}
+
+.close{
+    width: 15px;
+    heigth: 15px;
+    float: right;
+    padding-top: 8px;
+    padding-right: 15px;
+}
+
+.info-text {
+    height: 15px;
+    font-size: 15px;
+    color: black;
+    padding-top: 7px;
+    padding-left: 20px;
+    display: inherit;
+    float:left;
+}
+
+.emoji_positive, .emoji_neutral, .emoji_poop {
+    width: 24px;
+    heigth: 21px;
+}
