@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'homes#index'
 
-  resources :directions
-  resources :traffic
+  resources :directions, only: :index
+  resources :traffic, only: :index
+  resources :environment, only: :index
 end

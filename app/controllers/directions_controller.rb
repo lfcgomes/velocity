@@ -80,14 +80,14 @@ class DirectionsController < ApplicationController
   private
 
   def get_address(coordinates)
-    #https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=YOUR_API_KEY
-    response = @conn.get 'geocode/json', { latlng: coordinates, key: $gmaps_key }
+    #https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyBUFZFchMpUpOq-j9X4piApksiJ5zg5zS0
+    response = @conn.get 'geocode/json', { latlng: coordinates, key: 'AIzaSyBUFZFchMpUpOq-j9X4piApksiJ5zg5zS0' }
     streets = JSON.parse(response.body)
 
     most_relevant_street = ""
     streets['results'][0]['address_components'].each do |component|
       if component['types'].include?("route")
-        most_relevant_street = component['long_name']
+        most_relevant_street = component['long_name'].delete("^\u{0000}-\u{007F}")
         break
       end
     end
@@ -95,56 +95,36 @@ class DirectionsController < ApplicationController
   end
 
   def get_busy_streets
-    # @conn = Faraday.new(:url => 'http://fiware-porto.citibrain.com/v1/') do |faraday|
-    #   faraday.request  :url_encoded             # form-encode POST params
-    #   faraday.response :logger                  # log requests to STDOUT
-    #   faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
-    # end
+    busy_conn = Faraday.new(:url => 'http://fiware-porto.citibrain.com/v1/') do |faraday|
+      faraday.request  :url_encoded             # form-encode POST params
+      faraday.response :logger                  # log requests to STDOUT
+      faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+    end
 
-    # response = @conn.get 'contextEntityTypes/RoadEvent', { key: $api_key }
+    response = busy_conn.get 'contextEntityTypes/RoadEvent', { key: $api_key, offset: 0, limit: 1000 }
 
-    # streets = JSON.parse(response.body)['contextResponses']
+    streets = JSON.parse(response.body)['contextResponses']
 
-    # street_states = {busy: [], normal: []}
+    street_states = {busy: [], normal: []}
 
-    # streets.each do |street|
-    #   attributes = street['contextElement']['attributes']
-    #   status = ""
-    #   name  = ""
-    #   attributes.each do |attribute|
-    #     next unless ["status","street_name"].include?(attribute['name'])
-    #     next unless attribute['value'].present?
-    #     status = attribute['value'] if attribute['name'] == "status"
-    #     name   = attribute['value'] if attribute['name'] == "street_name"
-    #   end
-    #   if status.present? and name.present?
-    #     street_states[status.to_sym] << name
-    #   end
-    # end
-    # street_states
-    {
-      busy: [
-      "Rua da Aliança",
-      "Praça Coronel Pacheco",
-      "Rua de São Dinis",
-      "Rua São Vicente Paulo",
-      "Rua 3",
-      "Rua Doutor António Sousa Macedo",
-      "Rua de Gonçalo Cristóvão",
-      "Rua da Picaria",
-      "Rua de Passos Manuel"
-      ],
-      normal: [
-      "Rua Nove de Abril",
-      "Rua de Monsanto",
-      "Rua Vitorino Damsio",
-      "Rua Aires de Ornelas",
-      "Rua Doutor António Luís Gomes",
-      "Rua Martins Sarmento",
-      "Rua de Duarte Barbosa",
-      "Rua de Camões",
-      "Rua General Sousa Dias"
-      ]
-      }
+    streets.each do |street|
+      attributes = street['contextElement']['attributes']
+      status = ""
+      name  = ""
+      attributes.each do |attribute|
+        next unless ["status","street_name"].include?(attribute['name'])
+        next unless attribute['value'].present?
+        status = attribute['value'] if attribute['name'] == "status"
+        name   = attribute['value'] if attribute['name'] == "street_name"
+      end
+      if status.present? and name.present?
+        street_states[status.to_sym] << name
+      end
+    end
+    street_states
+
+
+
+
   end
 end
