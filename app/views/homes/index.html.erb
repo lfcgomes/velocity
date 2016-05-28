@@ -53,8 +53,10 @@
         var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer;
         var directionsDisplay1 = new google.maps.DirectionsRenderer;
+        var directionsDisplay2 = new google.maps.DirectionsRenderer;
         directionsDisplay.setMap(map);
         directionsDisplay1.setMap(map);
+        directionsDisplay2.setMap(map);
 
         var route1 = routes[0];
         var wpts = [];
@@ -175,6 +177,76 @@
                         //environment
                         div += "<hr>"
                         var stats = route2.stats;
+                        for(var i=0;i<stats.length;i++){
+                            div += '<div class="environment"><span>'+stats[i].name+'</span><span class="value">'+stats[i].value+'</span></div>'
+                        }
+
+                        div += '</div>';
+
+                        $('#info').hide();
+                        $('#wrapper').parent().append(div);
+                        handleClickOnEmoji();
+
+                    });
+
+                } else {
+                  window.alert('Directions request failed due to ' + status);
+                }
+            });
+        }
+
+        if(routes[2]){
+            var route3 = routes[2];
+            console.log('há alternativa!');
+            console.log(route3.steps.length);
+            var wpts2 = [];
+            for(i=1; i < route2.steps.length-1; i++){
+                if(wpts2.length < 8)
+                    wpts2.push({location: route3.steps[i].start_location, stopover: false});
+            }
+
+            directionsService.route({
+                origin: origin_marker.getPosition(),
+                destination: destination_marker.getPosition(),
+                waypoints: wpts2,
+                travelMode: google.maps.TravelMode.WALKING
+              }, function(response, status) {
+                if (status === google.maps.DirectionsStatus.OK) {
+
+                    directionsDisplay2.setDirections(response);
+                    var routeMarker3 = new google.maps.Marker({
+                        map: map,
+                        position: wpts2[parseInt(wpts2.length/2)].location,
+                        icon: '<%= image_url "info_tag_orange"%>'
+                    });
+
+                    routeMarker3.addListener('click', function() {
+                        $('#route_info').remove();
+                        console.log(route2.steps);
+                        var div = '<div id="route_info" class="controls">';
+                        var steps = route3.steps;
+                        var streets = [];
+                        for (var i = 0; i < steps.length; i++) {
+                            div += '<div style="margin-bottom: 5px;">'
+                            if (streets.indexOf(steps[i].start_location.name) <0){
+
+                                streets.push(steps[i].start_location.name);
+                                var street_name;
+                                if(steps[i].start_location.name.length > 25){
+                                    street_name = steps[i].start_location.name.substring(0, 22) + '...';
+                                }
+                                else
+                                    street_name = steps[i].start_location.name;
+                                div += '<span class="'+steps[i].start_location.status+'">'+street_name + '</span> ';
+                                div += '<%= image_tag "emoji_poop", class: "emoji_poop" %> <%= image_tag "emoji_neutral", class: "emoji_neutral"%> <%= image_tag "emoji_positive", class: "emoji_positive" %>'
+                                div += '</div>';
+                            }
+
+                        }
+
+                        //environment
+                        div += "<hr>"
+                        var stats = route3.stats;
                         for(var i=0;i<stats.length;i++){
                             div += '<div class="environment"><span>'+stats[i].name+'</span><span class="value">'+stats[i].value+'</span></div>'
                         }
