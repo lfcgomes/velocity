@@ -7,7 +7,7 @@ class TrafficController < ApplicationController
       faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
     end
 
-    response = @conn.get 'contextEntityTypes/RoadEvent', { key: $api_key }
+    response = @conn.get 'contextEntityTypes/RoadEvent', { key: $api_key, offset: 0, limit: 1000 }
 
     streets = JSON.parse(response.body)['contextResponses']
 
@@ -22,11 +22,6 @@ class TrafficController < ApplicationController
         next unless attribute['value'].present?
         status = attribute['value'] if attribute['name'] == "status"
         name   = attribute['value'] if attribute['name'] == "street_name"
-        if attribute['name'] == "street_name"
-          puts "*" * 10
-          puts attribute['value']
-          puts "*" * 10
-        end
       end
       if status.present? and name.present?
         street_states[status.to_sym] << name
