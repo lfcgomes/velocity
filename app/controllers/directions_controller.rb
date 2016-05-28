@@ -17,7 +17,7 @@ class DirectionsController < ApplicationController
 
     # TODO calculate streets_to_avoid
     streets_with_cars = get_busy_streets
-    streets_to_avoid = streets_with_cars[:busy] || []
+    streets_to_avoid = streets_with_cars
     #
     routes_and_colisions_map = {}
     routes.each_with_index do |route,i|
@@ -31,24 +31,46 @@ class DirectionsController < ApplicationController
       steps.each do |step|
         step_starting_point = "#{step['start_location']['lat']},#{step['start_location']['lng']}"
         step_ending_point   = "#{step['end_location']['lat']},#{step['end_location']['lng']}"
+        step_starting_street = get_address(step_starting_point)
+        step_ending_street = get_address(step_ending_point)
+
         unless route_streets_coordinates.include?(step_starting_point)
           route_streets_coordinates << step_starting_point
-          route_streets_addresses   << get_address(step_starting_point)
+          route_streets_addresses   << step_starting_street
         end
 
         unless route_streets_coordinates.include?(step_ending_point)
           route_streets_coordinates << step_ending_point
-          route_streets_addresses   << get_address(step_ending_point)
+          route_streets_addresses   << step_ending_street
+        end
+        if streets_to_avoid[:busy].include?(step_starting_street)
+          starting_street_status = "busy"
+        elsif streets_to_avoid[:normal].include?(step_starting_street)
+          starting_street_status = "normal"
+        else
+          starting_street_status = "free"
         end
 
-        formatted_steps << {start_location: {lat: step['start_location']['lat'], lng: step['start_location']['lng']},
-                            end_location: {lat: step['end_location']['lat'], lng: step['end_location']['lng']}}
+        if streets_to_avoid[:busy].include?(step_ending_street)
+          ending_street_status = "busy"
+        elsif streets_to_avoid[:normal].include?(step_ending_street)
+          ending_street_status = "normal"
+        else
+          ending_street_status = "free"
+        end
+
+        final_step = {
+          start_location: {lat: step['start_location']['lat'], lng: step['start_location']['lng'], name:step_starting_street, status: starting_street_status},
+          end_location: {lat: step['end_location']['lat'], lng: step['end_location']['lng'], name: step_ending_street, status: ending_street_status}
+        }
+
+        formatted_steps << final_step
       end
       route_streets_addresses.uniq!
       puts route_streets_addresses
       routes_and_colisions_map[i] = {
         steps: formatted_steps,
-        busy_streets: route_streets_addresses & streets_to_avoid
+        busy_streets: route_streets_addresses & streets_to_avoid[:busy]
       }
     end
 
