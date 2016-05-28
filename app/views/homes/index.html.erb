@@ -1,17 +1,18 @@
-<p id="notice"><%= notice %></p>
 
+<div id="wrapper">
     <input id="origin" class="controls" type="text"
         placeholder="Enter the origin">
     <input id="destination" class="controls" type="text" 
     placeholder="Enter the destination">
     <button name="calculate" id="calculate" class="controls">Calculate!</button>
-    <div id="map"></div>
+</div>
+<div id="map"></div>
 <script type="text/javascript">
 
     var map, autocomplete_origin, autocomplete_destination;
     var placeSearch;
     var geocoder;
-    var origin_marker, destination_marker;
+    var origin_marker, destination_marker, bounds;
 
     $('#calculate').click(function(){
         var origin = $('#origin').val();
@@ -25,6 +26,7 @@
                 data.origin = results[0].geometry.location.lat()+','+results[0].geometry.location.lng();
                 geocoder.geocode( { 'address': destination}, function(results, status) {
                     data.destination = results[0].geometry.location.lat()+','+results[0].geometry.location.lng();
+                    console.log(data);
                     $.ajax({
                         type: "POST",
                         url: '/directions',
@@ -48,18 +50,21 @@
         var directionsService = new google.maps.DirectionsService;
         geocoder = new google.maps.Geocoder();
 
-        var origin_input = (document.getElementById('origin'));
-        var destination_input = (document.getElementById('destination'));
-        var calculat_button = (document.getElementById('calculate'));
+        var wrapper = (document.getElementById('wrapper'));
         
         map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -34.397, lng: 150.644},
-            zoom: 8
+            center: {lat: 41.159882, lng: -8.628955},
+            zoom: 14
         });
 
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(origin_input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(destination_input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(calculate);
+        google.maps.event.addDomListener(window, 'resize', function(){
+            console.log('fez resize!!!');
+            // map.setCenter(map_center);
+            if(bounds) 
+                map.fitBounds(bounds);
+        });
+
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(wrapper);
 
         var autocomplete_origin = new google.maps.places.Autocomplete(
             (document.getElementById('origin')),{types: ['geocode']});
@@ -87,7 +92,7 @@
                 map: map,
                 position: place.geometry.location
             });
-            var bounds = new google.maps.LatLngBounds();
+            bounds = new google.maps.LatLngBounds();
             bounds.extend(origin_marker.position);
             if(destination_marker){
                 bounds.extend(destination_marker.position);
@@ -123,7 +128,7 @@
                 map: map,
                 position: place.geometry.location
             });
-            var bounds = new google.maps.LatLngBounds();
+            bounds = new google.maps.LatLngBounds();
             bounds.extend(destination_marker.position);
             if(origin_marker){
                 bounds.extend(origin_marker.position);
@@ -141,8 +146,8 @@
             infowindowDestination.setContent('<div><strong>' + place.name + '</strong><br>' + address);
             infowindowDestination.open(map, destination_marker);
         });
-
     }
+
 
 </script>
 <script async defer

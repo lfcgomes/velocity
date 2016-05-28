@@ -46,3 +46,9 @@ html, body {
 #origin:focus {
     border-color: #4d90fe;
 }
+
+@media (max-width: 500px) {
+    #origin, #destination{
+        width: 75%; 
+    }
+}
