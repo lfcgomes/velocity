@@ -1,26 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-
-<h1>Aqui vai estar um mapa</h1>
+    <input id="origin" class="controls" type="text"
+        placeholder="Enter the origin">
+    <input id="destination" class="controls" type="text" 
+    placeholder="Enter the destination">
+    <button name="calculate" id="calculate" class="controls">Calculate!</button>
     <div id="map"></div>
-    <div id="right-panel">
-        <b>Start</b>
-        <input type="text" name="origin" id="origin">
-        <br>
-        <b>Destination</b>
-        <input type="text" name="destination" id="destination">
-        <br>
-        <button name="calculate" id="calculate">Calculate!</button>
-    </div>
 <script type="text/javascript">
 
     var map, autocomplete_origin, autocomplete_destination;
     var placeSearch;
     var geocoder;
+    var origin_marker, destination_marker;
 
     $('#calculate').click(function(){
-        var origin = $('input[name=origin]').val();
-        var destination = $('input[name=origin]').val();
+        var origin = $('#origin').val();
+        var destination = $('#destination').val();
         if(origin.length === 0) console.log('no origin');
         if(destination.length === 0) console.log('no destination');
 
@@ -42,8 +37,6 @@
                 alert("Geocode was not successful for the following reason: " + status);
             }
         });
-
-        
     });
     
     function drawTrajectory(){
@@ -51,24 +44,36 @@
     }
 
     function initMap() {
+
         var directionsService = new google.maps.DirectionsService;
-        var bounds = new google.maps.LatLngBounds();
         geocoder = new google.maps.Geocoder();
+
+        var origin_input = (document.getElementById('origin'));
+        var destination_input = (document.getElementById('destination'));
+        var calculat_button = (document.getElementById('calculate'));
+        
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: -34.397, lng: 150.644},
             zoom: 8
         });
-        
+
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(origin_input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(destination_input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(calculate);
+
         var autocomplete_origin = new google.maps.places.Autocomplete(
             (document.getElementById('origin')),{types: ['geocode']});
-
         autocomplete_origin.bindTo('bounds', map);
 
         autocomplete_destination = new google.maps.places.Autocomplete(
             (document.getElementById('destination')),{types: ['geocode']});
         // When the user selects an address from the dropdown, populate the address
         // fields in the form.
+        
         autocomplete_origin.addListener('place_changed', function(){
+            if(origin_marker)
+                origin_marker.setMap(null);
+
             var infowindowOrigin = new google.maps.InfoWindow();
             var place = autocomplete_origin.getPlace();
             if (place.geometry.viewport) {
@@ -78,11 +83,17 @@
                 map.setZoom(15);
             }
 
-            var marker = new google.maps.Marker({
+            origin_marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location
             });
-            bounds.extend(marker.position);
+            var bounds = new google.maps.LatLngBounds();
+            bounds.extend(origin_marker.position);
+            if(destination_marker){
+                bounds.extend(destination_marker.position);
+                map.fitBounds(bounds);
+            }
+            
             var address = '';
             if (place.address_components) {
                 address = [
@@ -92,10 +103,13 @@
                 ].join(' ');
             }
             infowindowOrigin.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-            infowindowOrigin.open(map, marker);
+            infowindowOrigin.open(map, origin_marker);
         });
 
         autocomplete_destination.addListener('place_changed', function(){
+            if(destination_marker)
+                destination_marker.setMap(null);
+
             var infowindowDestination = new google.maps.InfoWindow();
             var place = autocomplete_destination.getPlace();
             if (place.geometry.viewport) {
@@ -105,12 +119,17 @@
                 map.setZoom(15); 
             }
 
-            var marker1 = new google.maps.Marker({
+            destination_marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location
             });
-            bounds.extend(marker1.position);
-            map.fitBounds(bounds);
+            var bounds = new google.maps.LatLngBounds();
+            bounds.extend(destination_marker.position);
+            if(origin_marker){
+                bounds.extend(origin_marker.position);
+                map.fitBounds(bounds);
+            }
+            
             var address = '';
             if (place.address_components) {
                 address = [
@@ -120,7 +139,7 @@
                 ].join(' ');
             }
             infowindowDestination.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-            infowindowDestination.open(map, marker1);
+            infowindowDestination.open(map, destination_marker);
         });
 
     }
